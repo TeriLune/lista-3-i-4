@@ -50,6 +50,11 @@ void Loop::mainLoop() {
 				break;
 			}
 			default:
+				system("cls");
+				std::cout << "Nieprawidlowa opcja. Sprobuj ponownie.\n";
+
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				break;
 		}
 

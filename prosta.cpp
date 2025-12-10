@@ -28,10 +28,12 @@ void Prosta::start() {
 			system("cls");
 			isRunning = false;
 		}
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 }
 
 bool Prosta::CzyLezaNaProstej(float Ax, float Ay, float Bx, float By, float Cx, float Cy) {
     float d = (Bx - Ax) * (Cy - Ay) - (By - Ay) * (Cx - Ax);
-    return fabs(d) < 1e-6;
+    return std::fabs(d) < 1e-6;
 }
